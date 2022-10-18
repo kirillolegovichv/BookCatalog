@@ -23,6 +23,13 @@ namespace BookCatalog.UI
         public MainWindow()
         {
             InitializeComponent();
+
+            Edit.Visibility = Visibility.Hidden;
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
