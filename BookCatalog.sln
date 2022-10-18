@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalog.UI", "BookCatalog.UI\BookCatalog.UI.csproj", "{AD8431F7-74A8-4B98-A0D7-46439A4D4182}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD8431F7-74A8-4B98-A0D7-46439A4D4182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD8431F7-74A8-4B98-A0D7-46439A4D4182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD8431F7-74A8-4B98-A0D7-46439A4D4182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD8431F7-74A8-4B98-A0D7-46439A4D4182}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {202C6C09-618F-4C03-B958-1932B7C03B2F}
+	EndGlobalSection
+EndGlobal
