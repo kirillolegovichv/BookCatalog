@@ -10,9 +10,14 @@
         <TabControl SelectionChanged="TabControl_SelectionChanged">
             <TabItem x:Name="MainMenu" Header="Главная">
                 <Grid Background="#FFE5E5E5">
-                    <Button Content=" Добавить " HorizontalAlignment="Left" Margin="600,350,0,0" VerticalAlignment="Top"/>
-                    <Button Content=" Редактировать " HorizontalAlignment="Left" Margin="500,350,0,0" VerticalAlignment="Top"/>
-                    <Button Content=" Удалить " HorizontalAlignment="Left" Margin="440,350,0,0" VerticalAlignment="Top"/>
+                    <GroupBox Height="300" Width="530" Background="LightGray" BorderBrush="Black" Margin="0,-50,0,0">
+                        <StackPanel x:Name="CatalogView">
+                            
+                        </StackPanel>
+                    </GroupBox>
+                    <Button Content=" Добавить " HorizontalAlignment="Left" Margin="600,350,0,0" VerticalAlignment="Top" Height="25"/>
+                    <Button Content=" Редактировать " HorizontalAlignment="Left" Margin="500,350,0,0" VerticalAlignment="Top" Height="25"/>
+                    <Button Content=" Удалить " HorizontalAlignment="Left" Margin="440,350,0,0" VerticalAlignment="Top" Height="25"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="Edit" Header="Редактирование">
