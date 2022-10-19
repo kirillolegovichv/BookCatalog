@@ -10,14 +10,17 @@
         <TabControl SelectionChanged="TabControl_SelectionChanged">
             <TabItem x:Name="MainMenu" Header="Главная">
                 <Grid Background="#FFE5E5E5">
-                    <GroupBox Height="300" Width="530" Background="LightGray" BorderBrush="Black" Margin="0,-50,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Height="300" Width="530" Background="LightGray" BorderBrush="Black" Margin="132,28,132,78">
                         <StackPanel x:Name="CatalogView">
-                            
+
                         </StackPanel>
                     </GroupBox>
-                    <Button x:Name="AddInMainMenu" Content=" Добавить " HorizontalAlignment="Left" Margin="600,350,0,0" VerticalAlignment="Top" Height="25"/>
-                    <Button x:Name="EditInMainMenu" Content=" Редактировать " HorizontalAlignment="Left" Margin="500,350,0,0" VerticalAlignment="Top" Height="25"/>
-                    <Button x:Name="DeleteInMainMenu" Content=" Удалить " HorizontalAlignment="Left" Margin="440,350,0,0" VerticalAlignment="Top" Height="25"/>
+                    <Button x:Name="AddInMainMenu" Content=" Добавить " HorizontalAlignment="Left" Margin="600,350,0,0" VerticalAlignment="Top" Height="25" Click="AddInMainMenu_Click"/>
+                    <Button x:Name="EditInMainMenu" Content=" Редактировать " HorizontalAlignment="Left" Margin="500,350,0,0" VerticalAlignment="Top" Height="25" Click="EditInMainMenu_Click"/>
+                    <Button x:Name="DeleteInMainMenu" Content=" Удалить " HorizontalAlignment="Left" Margin="440,350,0,0" VerticalAlignment="Top" Height="25" Click="DeleteInMainMenu_Click"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="Edit" Header="Редактирование">

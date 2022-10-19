@@ -36,5 +36,20 @@ namespace BookCatalog.UI
         {
 
         }
+
+        private void AddInMainMenu_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EditInMainMenu_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteInMainMenu_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
