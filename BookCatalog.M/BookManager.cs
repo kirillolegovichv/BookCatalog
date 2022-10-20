@@ -28,4 +28,17 @@ public class BookManager
                 ).ToString();
         }
     }
+
+    public List<BookDto> GetAllBooks()
+    {
+        using(var connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            return connection.Query<BookDto>
+                (StoredProcedure.Book_GetAll,
+                commandType: System.Data.CommandType.StoredProcedure
+                ).ToList();
+        }
+    }
 }
