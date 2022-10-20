@@ -27,10 +27,6 @@ namespace BookCatalog.UI
             Edit.Visibility = Visibility.Hidden;
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -39,15 +35,25 @@ namespace BookCatalog.UI
 
         private void AddInMainMenu_Click(object sender, RoutedEventArgs e)
         {
-
+            TabControl_BC.SelectedItem = Edit;
         }
 
         private void EditInMainMenu_Click(object sender, RoutedEventArgs e)
         {
-
+            TabControl_BC.SelectedItem = Edit;
         }
 
         private void DeleteInMainMenu_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void AuthorInEdit_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
