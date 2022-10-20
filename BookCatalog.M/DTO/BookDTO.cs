@@ -8,7 +8,7 @@ public class BookDTO
 
     public string Title { get; set; }
 
-    public string Auther { get; set; }
+    public int AutherId { get; set; }
 
     public int YearOfPublishing { get; set; }
 
@@ -17,4 +17,6 @@ public class BookDTO
     public string Description { get; set; }
 
     public Bitmap Image { get; set; }
+
+    public bool IsDeleted { get; set; }
 }

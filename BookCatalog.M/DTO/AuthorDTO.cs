@@ -9,4 +9,6 @@ public class AuthorDTO
     public string Name { get; set; }
 
     public string Patronimic { get; set; }
+
+    public bool IsDeleted { get; set; }
 }
