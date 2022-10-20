@@ -1,6 +1,6 @@
 ﻿namespace BookCatalog.M;
 
-public class AuthorDTO
+public class AuthorDto
 {
     public int Id { get; set; }
 
@@ -11,4 +11,9 @@ public class AuthorDTO
     public string Patronimic { get; set; }
 
     public bool IsDeleted { get; set; }
+
+    public AuthorDto()
+    {
+
+    }
 }

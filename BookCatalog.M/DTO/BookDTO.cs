@@ -2,13 +2,13 @@
 
 namespace BookCatalog.M;
 
-public class BookDTO
+public class BookDto
 {
     public int Id { get; set; }
 
     public string Title { get; set; }
 
-    public int AutherId { get; set; }
+    public int AuthorId { get; set; }
 
     public int YearOfPublishing { get; set; }
 
@@ -19,4 +19,9 @@ public class BookDTO
     public Bitmap Image { get; set; }
 
     public bool IsDeleted { get; set; }
+
+    public BookDto()
+    {
+
+    }
 }
