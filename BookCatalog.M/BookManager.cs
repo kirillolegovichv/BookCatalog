@@ -55,4 +55,18 @@ public class BookManager
                 );
         }
     }
+
+    public void DeleteBook(int id)
+    {
+        using(var connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            connection.QuerySingleOrDefault<BookDto>
+                (StoredProcedure.Book_SoftDelete,
+                param: new { id = id },
+                commandType: System.Data.CommandType.StoredProcedure
+                );
+        }
+    }
 }
