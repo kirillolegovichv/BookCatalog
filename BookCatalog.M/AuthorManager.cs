@@ -13,7 +13,7 @@ public class AuthorManager
         {
             connection.Open();
 
-            connection.QuerySingle
+            connection.QuerySingle<AuthorDto>
                 (StoredProcedure.Author_Add,
                 param: new
                 {
@@ -52,4 +52,20 @@ public class AuthorManager
                 );
         }
     }
+
+    public void DeleteAuthor(int id)
+    {
+        using(var connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            connection.QuerySingleOrDefault<AuthorDto>
+                (StoredProcedure.Author_SoftDelete,
+                param: new { id = id },
+                commandType: System.Data.CommandType.StoredProcedure
+                );
+        }
+    }
+
+
 }

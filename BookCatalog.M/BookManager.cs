@@ -13,7 +13,7 @@ public class BookManager
         {
             connection.Open();
 
-            connection.QuerySingle
+            connection.QuerySingle<BookDto>
                 (StoredProcedure.Book_Add,
                 param: new
                 {
