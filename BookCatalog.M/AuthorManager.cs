@@ -39,5 +39,17 @@ public class AuthorManager
         }
     }
 
+    public AuthorDto GetAuthorById(int id)
+    {
+        using(var connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
 
+            return connection.QuerySingle<AuthorDto>
+                (StoredProcedure.Author_GetById,
+                param: new { id = id },
+                commandType: System.Data.CommandType.StoredProcedure                
+                );
+        }
+    }
 }
