@@ -25,4 +25,19 @@ public class AuthorManager
                 );
         }
     }
+
+    public List<AuthorDto> GetAllAuthors()
+    {
+        using(var connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            return connection.Query<AuthorDto>
+                (StoredProcedure.Author_GetAll,
+                commandType: System.Data.CommandType.StoredProcedure
+                ).ToList();
+        }
+    }
+
+
 }
