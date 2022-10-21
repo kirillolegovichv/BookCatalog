@@ -67,5 +67,22 @@ public class AuthorManager
         }
     }
 
+    public void UpdateAuthor(AuthorDto author)
+    {
+        using(var connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
 
+            connection.QuerySingleOrDefault<AuthorDto>
+                (StoredProcedure.Author_Update,
+                param: new
+                {
+                    Surname = author.Surname,
+                    Name = author.Name,
+                    Patronimic = author.Patronimic
+                },
+                commandType: System.Data.CommandType.StoredProcedure
+                );
+        }
+    }
 }
