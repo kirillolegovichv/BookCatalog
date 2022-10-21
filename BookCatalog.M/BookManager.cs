@@ -7,13 +7,13 @@ public class BookManager
 {
     public string connectionString = ServerOption.ConnectionOption;
 
-    public string AddBook(BookDto book)
+    public void AddBook(BookDto book)
     {
         using(var connection = new SqlConnection(connectionString))
         {
             connection.Open();
 
-            return connection.QuerySingle<string>
+            connection.QuerySingle<string>
                 (StoredProcedure.Book_Add,
                 param: new
                 {
@@ -25,7 +25,7 @@ public class BookManager
                     Image = book.Image
                 },
                 commandType: System.Data.CommandType.StoredProcedure
-                ).ToString();
+                );
         }
     }
 
@@ -65,6 +65,28 @@ public class BookManager
             connection.QuerySingleOrDefault<BookDto>
                 (StoredProcedure.Book_SoftDelete,
                 param: new { id = id },
+                commandType: System.Data.CommandType.StoredProcedure
+                );
+        }
+    }
+
+    public void UpdateBook(BookDto book)
+    {
+        using(var connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            connection.QuerySingleOrDefault<BookDto>
+                (StoredProcedure.Book_Update,
+                param: new
+                {
+                    Title = book.Title,
+                    AutherId = book.AuthorId,
+                    YearOfPublishing = book.YearOfPublishing,
+                    ISBN = book.ISBN,
+                    Description = book.Description,
+                    Image = book.Image
+                },
                 commandType: System.Data.CommandType.StoredProcedure
                 );
         }
